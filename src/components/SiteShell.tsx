@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { CurrentYear } from "@/components/CurrentYear";
+import { kaffyPortrait } from "@/lib/portrait";
 
 const navItems = [
   ["Security Work", "/#work"],
@@ -15,7 +17,16 @@ export function SiteHeader() {
       <header className="site-header">
         <div className="container nav-wrap">
           <Link href="/" className="brand" aria-label="Kafayat Faniran home">
-            <span className="brand-mark">KF</span>
+            <span
+              className="brand-mark"
+              aria-hidden="true"
+              style={{
+                backgroundImage: `url(${kaffyPortrait})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center 18%",
+                backgroundRepeat: "no-repeat",
+              }}
+            />
             <span className="brand-copy"><strong>Kafayat Faniran</strong><small>Cloud Security Engineer</small></span>
           </Link>
           <nav className="desktop-nav" aria-label="Primary navigation">
@@ -51,7 +62,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© 2026 Kafayat Faniran</span>
+        <span>© <CurrentYear /> Kafayat Faniran</span>
         <span>kaffy.thecloudforge.app</span>
       </div>
     </footer>
