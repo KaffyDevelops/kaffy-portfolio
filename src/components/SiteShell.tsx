@@ -31,6 +31,7 @@ export function SiteHeader() {
           </details>
         </div>
       </header>
+      <span id="main-content" className="skip-target" aria-hidden="true" />
     </>
   );
 }
