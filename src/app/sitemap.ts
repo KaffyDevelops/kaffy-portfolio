@@ -11,5 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/work/detection-as-code`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/work/cloud-forge-security`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/work/secure-portfolio`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/work/gcp-cloud-security-engineering`, changeFrequency: "monthly", priority: 0.9 },
   ];
 }
