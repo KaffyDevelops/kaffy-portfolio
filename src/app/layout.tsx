@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/site-icon",
+    shortcut: "/site-icon",
+    apple: "/site-icon",
+  },
   openGraph: {
     title: "Kafayat ‘Kaffy’ Faniran | Cloud Security Engineer",
     description:
@@ -38,6 +43,8 @@ const personStructuredData = {
     "https://github.com/KaffyDevelops",
     "https://www.linkedin.com/in/kafayatfaniran",
     "https://www.thecloudforge.app",
+    "https://www.cloudbeginners.info",
+    "https://thekaffycyberconsulting.com",
   ],
   knowsAbout: [
     "Cloud Security",
