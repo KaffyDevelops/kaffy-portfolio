@@ -123,7 +123,7 @@ export default function Home() {
           <div className="container proof-grid">
             <div><strong>10,500+</strong><span>LinkedIn followers</span></div>
             <div><strong>2,500+</strong><span>Newsletter subscribers</span></div>
-            <div><strong>3</strong><span>Cloud ecosystems</span></div>
+            <div><strong>6</strong><span>Flagship security projects</span></div>
             <div><strong>Founder</strong><span>The Cloud Forge</span></div>
           </div>
         </section>
@@ -131,26 +131,44 @@ export default function Home() {
         <section id="work" className="section section-light">
           <div className="container">
             <div className="section-heading split-heading">
-              <div><p className="eyebrow dark">SELECTED SECURITY WORK</p><h2>Evidence before claims.</h2></div>
-              <p>Deep technical case studies showing the problem, risk, architecture, implementation, validation and lessons behind the work.</p>
+              <div><p className="eyebrow dark">FLAGSHIP SECURITY ENGINEERING</p><h2>Evidence before claims.</h2></div>
+              <p>Six technical projects spanning detection engineering, IAM governance, infrastructure as code, secure product architecture and multi-cloud security. Each case study distinguishes implemented work from validation still in progress.</p>
             </div>
             <div className="work-grid">
               <Link href="/work/azure-soc-lab" className="project-card project-featured">
                 <div className="project-meta"><span>01</span><span>INDEPENDENT SECURITY LAB</span></div>
-                <div className="project-art terminal-art"><div className="terminal-bar"><i/><i/><i/></div><code>SecurityAlert<br/>| where Severity in ("High", "Medium")<br/>| summarize count() by AlertName</code><div className="alert-chip">SENTINEL • KQL</div></div>
-                <div className="project-copy"><h3>Microsoft Sentinel SOC & Threat Detection</h3><p>Log ingestion, custom KQL detection, incident simulation and investigation using Microsoft Sentinel.</p><div className="tag-row"><span>Microsoft Sentinel</span><span>Entra ID</span><span>KQL</span><span>Incident Response</span></div><strong className="text-link">Read technical case study ↗</strong></div>
+                <div className="project-art terminal-art"><div className="terminal-bar"><i/><i/><i/></div><code>SigninLogs<br/>| where ResultType == "50126"<br/>| summarize FailedAttempts=count()</code><div className="alert-chip">SENTINEL • KQL</div></div>
+                <div className="project-copy"><h3>Microsoft Sentinel SOC & Threat Detection</h3><p>Detection engineering, evidence standards and incident investigation built around Microsoft Sentinel and Entra ID telemetry.</p><div className="tag-row"><span>Microsoft Sentinel</span><span>Entra ID</span><span>KQL</span><span>Incident Response</span></div><strong className="text-link">Read technical case study ↗</strong></div>
               </Link>
 
               <Link href="/work/enterprise-iam-transformation" className="project-card">
                 <div className="project-meta"><span>02</span><span>FICTIONAL ENTERPRISE SCENARIO</span></div>
                 <div className="project-art iam-art"><div className="iam-node root">IDENTITY</div><div className="iam-node n1">RBAC</div><div className="iam-node n2">MFA</div><div className="iam-node n3">PIM</div><div className="iam-node n4">REVIEWS</div></div>
-                <div className="project-copy"><h3>Enterprise Azure IAM Transformation</h3><p>Current-state assessment and target IAM design addressing excessive privilege, stale access, weak authentication and governance gaps.</p><div className="tag-row"><span>Entra ID</span><span>RBAC</span><span>Conditional Access</span><span>PIM</span></div><strong className="text-link">Explore the IAM case study ↗</strong></div>
+                <div className="project-copy"><h3>Azure IAM Governance Lab</h3><p>Enterprise IAM assessment, Microsoft Graph evidence collectors, RBAC, Conditional Access, PIM, access reviews and workload identity governance.</p><div className="tag-row"><span>Entra ID</span><span>Graph PowerShell</span><span>RBAC</span><span>PIM</span></div><strong className="text-link">Explore the IAM case study ↗</strong></div>
+              </Link>
+
+              <Link href="/work/aws-cloud-security-engineering" className="project-card">
+                <div className="project-meta"><span>03</span><span>TERRAFORM SECURITY ENGINEERING</span></div>
+                <div className="project-art terminal-art"><div className="terminal-bar"><i/><i/><i/></div><code>terraform validate<br/>cloudtrail = enabled<br/>flow_logs = enabled<br/>access_analyzer = enabled</code><div className="alert-chip">AWS • TERRAFORM</div></div>
+                <div className="project-copy"><h3>AWS Cloud Security Engineering</h3><p>Cost-conscious AWS reference architecture with segmented networking, audit logging, KMS protection, IAM assurance and a control-validation programme.</p><div className="tag-row"><span>AWS</span><span>Terraform</span><span>CloudTrail</span><span>KMS</span></div><strong className="text-link">View AWS case study ↗</strong></div>
+              </Link>
+
+              <Link href="/work/detection-as-code" className="project-card">
+                <div className="project-meta"><span>04</span><span>OPEN-SOURCE MULTI-CLOUD</span></div>
+                <div className="project-art terminal-art"><div className="terminal-bar"><i/><i/><i/></div><code>detections/azure/AZ-001<br/>detections/aws/AWS-001<br/>detections/gcp/GCP-001<br/>status: implemented</code><div className="alert-chip">MITRE • SIGMA</div></div>
+                <div className="project-copy"><h3>Cloud Security Detection as Code</h3><p>Reusable Azure, AWS and Google Cloud detection rules with a common metadata contract, ATT&CK mapping, quality CI and explicit validation states.</p><div className="tag-row"><span>Azure</span><span>AWS</span><span>GCP</span><span>MITRE ATT&CK</span></div><strong className="text-link">Explore Detection as Code ↗</strong></div>
               </Link>
 
               <Link href="/work/cloud-forge-security" className="project-card">
-                <div className="project-meta"><span>03</span><span>PRODUCT DEVELOPMENT</span></div>
-                <div className="project-art forge-art"><div className="forge-stack"><span>AI COACH</span><span>ASSESSMENT</span><span>EVIDENCE</span><span>RLS + SECURITY</span></div><div className="forge-orbit">CF</div></div>
-                <div className="project-copy"><h3>Building & Securing The Cloud Forge</h3><p>Security architecture for an AI-powered cloud security learning platform, from Row Level Security and secrets to evidence handling and secure product workflows.</p><div className="tag-row"><span>Next.js</span><span>Supabase</span><span>PostgreSQL</span><span>AI Security</span></div><strong className="text-link">View founder case study ↗</strong></div>
+                <div className="project-meta"><span>05</span><span>SECURE PRODUCT ARCHITECTURE</span></div>
+                <div className="project-art forge-art"><div className="forge-stack"><span>AI BOUNDARY</span><span>PAYMENTS</span><span>EVIDENCE</span><span>RLS + SECURITY</span></div><div className="forge-orbit">CF</div></div>
+                <div className="project-copy"><h3>Cloud Forge Security Architecture</h3><p>Public, sanitised SaaS security architecture covering RLS, evidence ownership, AI boundaries, secrets, payments, logging, CI/CD and recovery.</p><div className="tag-row"><span>Next.js</span><span>Supabase</span><span>PostgreSQL</span><span>AI Security</span></div><strong className="text-link">View founder security case study ↗</strong></div>
+              </Link>
+
+              <Link href="/work/secure-portfolio" className="project-card">
+                <div className="project-meta"><span>06</span><span>SECURE WEB ENGINEERING</span></div>
+                <div className="project-art terminal-art"><div className="terminal-bar"><i/><i/><i/></div><code>Content-Security-Policy<br/>Strict-Transport-Security<br/>X-Frame-Options: DENY<br/>Permissions-Policy</code><div className="alert-chip">NEXT.JS • VERCEL</div></div>
+                <div className="project-copy"><h3>Secure Portfolio Engineering</h3><p>The engineering behind this live portfolio, including CSP, HSTS, browser-security headers, privacy-conscious evidence presentation and automated deployment.</p><div className="tag-row"><span>Next.js</span><span>TypeScript</span><span>CSP</span><span>Vercel</span></div><strong className="text-link">Inspect the portfolio case study ↗</strong></div>
               </Link>
             </div>
           </div>
