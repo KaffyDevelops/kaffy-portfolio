@@ -1,23 +1,37 @@
 import Link from "next/link";
 
+const navItems = [
+  ["Security Work", "/#work"],
+  ["Expertise", "/#expertise"],
+  ["The Cloud Forge", "/#forge"],
+  ["Writing", "/#writing"],
+  ["Credentials", "/#credentials"],
+] as const;
+
 export function SiteHeader() {
   return (
-    <header className="site-header">
-      <div className="container nav-wrap">
-        <Link href="/" className="brand" aria-label="Kafayat Faniran home">
-          <span className="brand-mark">KF</span>
-          <span className="brand-copy"><strong>Kafayat Faniran</strong><small>Cloud Security Engineer</small></span>
-        </Link>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <Link href="/#work">Security Work</Link>
-          <Link href="/#expertise">Expertise</Link>
-          <Link href="/#forge">The Cloud Forge</Link>
-          <Link href="/#writing">Writing</Link>
-          <Link href="/#credentials">Credentials</Link>
-        </nav>
-        <a className="button button-small button-ghost" href="mailto:kaffy@cloudbeginners.info">Contact</a>
-      </div>
-    </header>
+    <>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+      <header className="site-header">
+        <div className="container nav-wrap">
+          <Link href="/" className="brand" aria-label="Kafayat Faniran home">
+            <span className="brand-mark">KF</span>
+            <span className="brand-copy"><strong>Kafayat Faniran</strong><small>Cloud Security Engineer</small></span>
+          </Link>
+          <nav className="desktop-nav" aria-label="Primary navigation">
+            {navItems.map(([label, href]) => <Link key={label} href={href}>{label}</Link>)}
+          </nav>
+          <a className="button button-small button-ghost header-contact" href="mailto:kaffy@cloudbeginners.info">Contact</a>
+          <details className="mobile-menu">
+            <summary aria-label="Open navigation menu">Menu</summary>
+            <nav aria-label="Mobile navigation">
+              {navItems.map(([label, href]) => <Link key={label} href={href}>{label}</Link>)}
+              <a href="mailto:kaffy@cloudbeginners.info">Contact</a>
+            </nav>
+          </details>
+        </div>
+      </header>
+    </>
   );
 }
 
