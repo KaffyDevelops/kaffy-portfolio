@@ -216,8 +216,9 @@ export default function Home() {
             <div><p className="eyebrow dark">WRITING & PUBLIC EDUCATION</p><h2>Technical enough for engineers. Clear enough for decision-makers.</h2></div>
             <div className="publication-list">
               <article><span>01</span><div><small>NEWSLETTER</small><h3>CEO Cloud Security Memo</h3><p>Cloud security, resilience, IAM and cyber risk translated into practical guidance for business leaders.</p><strong>2,500+ subscribers</strong></div></article>
-              <article><span>02</span><div><small>TECHNICAL EDUCATION</small><h3>Cloud Beginners</h3><p>Practical cloud and cybersecurity education focused on clarity, employability and real-world application.</p></div></article>
-              <article><span>03</span><div><small>IN PRODUCTION</small><h3>The A–Z of Identity and Access Management</h3><p>Cloud-specific practical editions for Microsoft Azure, AWS and Google Cloud.</p></div></article>
+              <article><span>02</span><div><small>TECHNICAL EDUCATION</small><h3>Cloud Beginners</h3><p>Practical cloud and cybersecurity education focused on clarity, employability and real-world application.</p><strong><a href="https://www.cloudbeginners.info" target="_blank" rel="noreferrer">www.cloudbeginners.info ↗</a></strong></div></article>
+              <article><span>03</span><div><small>CYBERSECURITY AWARENESS COMPANY</small><h3>The Kaffy Cyber Consulting</h3><p>Founder-led cybersecurity awareness company helping organisations strengthen employee security behaviour through practical awareness, phishing defence, privacy and secure-work training.</p><strong><a href="https://thekaffycyberconsulting.com" target="_blank" rel="noreferrer">thekaffycyberconsulting.com ↗</a></strong></div></article>
+              <article><span>04</span><div><small>IN PRODUCTION</small><h3>The A–Z of Identity and Access Management</h3><p>Cloud-specific practical editions for Microsoft Azure, AWS and Google Cloud.</p></div></article>
             </div>
           </div>
         </section>
