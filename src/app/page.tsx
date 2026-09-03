@@ -123,7 +123,7 @@ export default function Home() {
           <div className="container proof-grid">
             <div><strong>10,500+</strong><span>LinkedIn followers</span></div>
             <div><strong>2,500+</strong><span>Newsletter subscribers</span></div>
-            <div><strong>6</strong><span>Flagship security projects</span></div>
+            <div><strong>7</strong><span>Flagship security projects</span></div>
             <div><strong>Founder</strong><span>The Cloud Forge</span></div>
           </div>
         </section>
@@ -132,7 +132,7 @@ export default function Home() {
           <div className="container">
             <div className="section-heading split-heading">
               <div><p className="eyebrow dark">FLAGSHIP SECURITY ENGINEERING</p><h2>Evidence before claims.</h2></div>
-              <p>Six technical projects spanning detection engineering, IAM governance, infrastructure as code, secure product architecture and multi-cloud security. Each case study distinguishes implemented work from validation still in progress.</p>
+              <p>Seven technical projects spanning detection engineering, IAM governance, infrastructure as code, secure product architecture and multi-cloud security. Each case study distinguishes implemented work from validation still in progress.</p>
             </div>
             <div className="work-grid">
               <Link href="/work/azure-soc-lab" className="project-card project-featured">
@@ -169,6 +169,12 @@ export default function Home() {
                 <div className="project-meta"><span>06</span><span>SECURE WEB ENGINEERING</span></div>
                 <div className="project-art terminal-art"><div className="terminal-bar"><i/><i/><i/></div><code>Content-Security-Policy<br/>Strict-Transport-Security<br/>X-Frame-Options: DENY<br/>Permissions-Policy</code><div className="alert-chip">NEXT.JS • VERCEL</div></div>
                 <div className="project-copy"><h3>Secure Portfolio Engineering</h3><p>The engineering behind this live portfolio, including CSP, HSTS, browser-security headers, privacy-conscious evidence presentation and automated deployment.</p><div className="tag-row"><span>Next.js</span><span>TypeScript</span><span>CSP</span><span>Vercel</span></div><strong className="text-link">Inspect the portfolio case study ↗</strong></div>
+              </Link>
+
+              <Link href="/work/gcp-cloud-security-engineering" className="project-card project-featured">
+                <div className="project-meta"><span>07</span><span>GOOGLE CLOUD • TERRAFORM SECURITY ENGINEERING</span></div>
+                <div className="project-art terminal-art"><div className="terminal-bar"><i/><i/><i/></div><code>terraform validate<br/>vpc_flow_logs = enabled<br/>service_account_keys = none<br/>audit_archive = KMS protected</code><div className="alert-chip">GCP • KEYLESS IAM</div></div>
+                <div className="project-copy"><h3>Google Cloud Security Engineering</h3><p>Google Cloud reference environment combining keyless IAM, segmented networking, VPC Flow Logs, Cloud Audit Logs, KMS-protected evidence storage and Workload Identity Federation design.</p><div className="tag-row"><span>Google Cloud</span><span>Terraform</span><span>Cloud Logging</span><span>Workload Identity</span></div><strong className="text-link">View Google Cloud case study ↗</strong></div>
               </Link>
             </div>
           </div>
