@@ -3,9 +3,10 @@ import { CurrentYear } from "@/components/CurrentYear";
 import { kaffyPortrait } from "@/lib/portrait";
 
 const navItems = [
-  ["Security Work", "/#work"],
-  ["Expertise", "/#expertise"],
-  ["The Cloud Forge", "/#forge"],
+  ["Work", "/#work"],
+  ["IAM", "/#iam"],
+  ["Founder", "/#founder"],
+  ["Author", "/#author"],
   ["Writing", "/#writing"],
   ["Credentials", "/#credentials"],
 ] as const;
@@ -27,7 +28,7 @@ export function SiteHeader() {
                 backgroundRepeat: "no-repeat",
               }}
             />
-            <span className="brand-copy"><strong>Kafayat Faniran</strong><small>Cloud Security Engineer</small></span>
+            <span className="brand-copy"><strong>Kafayat Faniran</strong><small>Cloud Security • IAM • Founder • Author</small></span>
           </Link>
           <nav className="desktop-nav" aria-label="Primary navigation">
             {navItems.map(([label, href]) => <Link key={label} href={href}>{label}</Link>)}
@@ -52,12 +53,14 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <p className="eyebrow">CLOUD SECURITY • PRODUCT • EDUCATION</p>
-          <h2>Build secure systems. Make security understandable.</h2>
+          <p className="eyebrow">CLOUD SECURITY • IAM • FOUNDER • AUTHOR</p>
+          <h2>I build secure systems, practical products and security education people can use.</h2>
         </div>
         <div className="footer-links">
           <a href="https://github.com/KaffyDevelops" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/kafayatfaniran" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.thecloudforge.app" target="_blank" rel="noreferrer">The Cloud Forge</a>
+          <a href="https://guide.thecloudforge.app" target="_blank" rel="noreferrer">My Book</a>
           <a href="mailto:kaffy@cloudbeginners.info">Email</a>
         </div>
       </div>
