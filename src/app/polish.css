@@ -264,3 +264,25 @@
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   .motion-reveal{opacity:1;transform:none}
 }
+
+
+/* Preserve the original two-column visual rhythm when cards are wrapped for scroll reveal. */
+.expertise-grid > .motion-reveal,
+.credential-grid > .motion-reveal { border-bottom: 1px solid var(--line-dark); }
+.expertise-grid > .motion-reveal:nth-child(odd) { border-right: 1px solid var(--line-dark); }
+.expertise-grid .expertise-card { border: 0; padding: 40px 46px 44px 0; height: 100%; }
+.expertise-grid > .motion-reveal:nth-child(even) .expertise-card { padding-left: 46px; }
+
+.credential-grid > .motion-reveal { border-bottom: 1px solid var(--line); }
+.credential-grid > .motion-reveal:nth-child(odd) { border-right: 1px solid var(--line); }
+.credential-grid .credential-card { border: 0; padding: 28px 20px 30px 0; height: 100%; }
+.credential-grid > .motion-reveal:nth-child(even) .credential-card { padding-left: 34px; }
+
+@media (max-width:700px){
+  .expertise-grid > .motion-reveal,
+  .credential-grid > .motion-reveal,
+  .expertise-grid > .motion-reveal:nth-child(odd),
+  .credential-grid > .motion-reveal:nth-child(odd){border-right:0}
+  .expertise-grid > .motion-reveal .expertise-card,
+  .credential-grid > .motion-reveal .credential-card{padding-left:0;padding-right:0}
+}
